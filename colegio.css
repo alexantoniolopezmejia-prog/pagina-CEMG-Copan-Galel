@@ -1,0 +1,674 @@
+/*=========================
+      ESTILOS GENERALES
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+section{
+    padding:80px 10%;
+}
+
+h2{
+    text-align:center;
+    font-size:40px;
+    color:#0b3d91;
+    margin-bottom:50px;
+    position:relative;
+}
+
+h2::after{
+    content:"";
+    width:90px;
+    height:4px;
+    background:#0077ff;
+    display:block;
+    margin:15px auto;
+    border-radius:10px;
+}
+
+/*=========================
+         MENÚ
+==========================*/
+
+header{
+    width:100%;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(10px);
+    z-index:999;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    color:white;
+}
+
+.logo img{
+    width:60px;
+    margin-right:15px;
+    border-radius:50%;
+}
+
+.logo h2{
+    color:white;
+    font-size:22px;
+    margin:0;
+}
+
+.logo h2::after{
+    display:none;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+}
+
+nav ul li{
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#4db8ff;
+}
+
+/*=========================
+          HERO
+==========================*/
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("imagenes/cole.jpeg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-text{
+    max-width:800px;
+    animation:fadeUp 1.2s;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    background:#0077ff;
+    color:white;
+    padding:15px 35px;
+    border-radius:40px;
+    font-weight:bold;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:#0057c8;
+    transform:translateY(-5px);
+}
+
+/*=========================
+     QUIÉNES SOMOS
+==========================*/
+
+.about{
+    background:white;
+}
+
+.about p{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+}
+
+.datos{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    transition:.4s;
+}
+.logo img{
+    width:60px;
+    margin-right:15px;
+    border-radius:50%;}
+
+.card:hover{
+    transform:translateY(-12px);
+}
+
+.card i{
+    font-size:50px;
+    color:#0077ff;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#0b3d91;
+}
+
+/*=========================
+      ANIMACIONES
+==========================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+/*=========================
+        CARRERAS
+==========================*/
+
+#carreras{
+    background:#eef5ff;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.cards .card{
+    overflow:hidden;
+}
+
+.cards .card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.5s;
+}
+
+.cards .card:hover img{
+    transform:scale(1.08);
+}
+
+.cards .card h3{
+    font-size:24px;
+    margin-top:20px;
+    color:#0b3d91;
+}
+
+.cards .card p{
+    color:#555;
+    margin-top:10px;
+}
+
+/*=========================
+        DOCENTES
+==========================*/
+
+#docentes{
+    background:white;
+}
+
+#docentes .card{
+    padding-bottom:30px;
+}
+
+#docentes .card img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:25px auto;
+    border:6px solid #0077ff;
+    transition:.4s;
+}
+
+#docentes .card:hover img{
+    transform:rotate(3deg) scale(1.05);
+}
+
+#docentes h3{
+    margin-top:10px;
+}
+
+/*=========================
+        DIRECTOR
+==========================*/
+
+#director{
+    background:#eef5ff;
+}
+
+.director{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    max-width:1100px;
+    margin:auto;
+    flex-wrap:wrap;
+}
+
+.director img{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid white;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.director div{
+    max-width:550px;
+}
+
+.director h3{
+    font-size:34px;
+    color:#0b3d91;
+    margin-bottom:15px;
+}
+
+.director p{
+    font-size:18px;
+    color:#555;
+}
+#subdirector{
+    background:#eef5ff;
+}
+
+.subdirector{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    max-width:1100px;
+    margin:auto;
+    flex-wrap:wrap;
+}
+
+.subdirector img{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid white;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.subdirector div{
+    max-width:550px;
+}
+
+.subdirector h3{
+    font-size:34px;
+    color:#0b3d91;
+    margin-bottom:15px;
+}
+
+.subdirector p{
+    font-size:18px;
+    color:#555;
+}
+
+/*=========================
+      EFECTOS GENERALES
+==========================*/
+
+.card{
+    cursor:pointer;
+}
+
+.card:hover{
+    box-shadow:0 20px 45px rgba(0,0,0,.20);
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+}
+
+.cards .card{
+    position:relative;
+}
+
+/*=========================
+       SEPARADORES
+==========================*/
+
+section:nth-child(even){
+    position:relative;
+}
+
+section:nth-child(even)::after{
+    content:"";
+    width:120px;
+    height:4px;
+    background:#0077ff;
+    display:block;
+    margin:50px auto 0;
+    border-radius:20px;
+}
+
+/*=========================
+     ANIMACIÓN TARJETAS
+==========================*/
+
+.cards .card{
+    animation:subir .8s ease;
+}
+
+@keyframes subir{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}/*=========================
+      CONTACTO
+==========================*/
+
+.contacto{
+    background:#ffffff;
+    padding:80px 10%;
+}
+
+.contacto form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contacto input,
+.contacto textarea{
+    width:100%;
+    padding:16px 20px;
+    border:1px solid #d9d9d9;
+    border-radius:12px;
+    font-size:16px;
+    font-family:'Poppins',sans-serif;
+    outline:none;
+    transition:.3s;
+}
+
+.contacto input:focus,
+.contacto textarea:focus{
+    border-color:#0077ff;
+    box-shadow:0 0 8px rgba(0,119,255,.2);
+}
+
+.contacto textarea{
+    min-height:160px;
+    resize:vertical;
+}
+
+.contacto button{
+    background:#0077ff;
+    color:#fff;
+    border:none;
+    padding:16px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contacto button:hover{
+    background:#005ecb;
+    transform:translateY(-3px);
+}
+
+/*=========================
+         FOOTER
+==========================*/
+
+footer{
+    background:#0b3d91;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.redes{
+    margin-bottom:20px;
+}
+
+.redes a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:50px;
+    height:50px;
+    margin:0 8px;
+    border-radius:50%;
+    background:#ffffff;
+    color:#0b3d91;
+    font-size:22px;
+    transition:.3s;
+}
+
+.redes a:hover{
+    background:#0077ff;
+    color:#fff;
+    transform:translateY(-5px);
+}
+
+footer p{
+    font-size:15px;
+}
+
+/*=========================
+     BOTÓN SUBIR
+==========================*/
+
+.subir{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    background:#0077ff;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+    transition:.3s;
+    z-index:999;
+}
+
+.subir:hover{
+    background:#005ecb;
+    transform:scale(1.1);
+}
+
+/*=========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:992px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .datos{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .director{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:768px){
+
+    section{
+        padding:60px 25px;
+    }
+
+    .hero{
+        padding:0 20px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    h2{
+        font-size:30px;
+    }
+
+    .logo img{
+        width:50px;
+    }
+
+    .logo h2{
+        font-size:18px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .btn{
+        display:block;
+        width:100%;
+        text-align:center;
+    }
+
+    .director img{
+        width:220px;
+        height:220px;
+    }
+
+    .subir{
+        width:45px;
+        height:45px;
+        font-size:18px;
+    }
+
+}
+
+/*=========================
+      SCROLL SUAVE
+==========================*/
+
+html{
+    scroll-behavior:smooth;
+}
+
+/*=========================
+      SELECCIÓN DE TEXTO
+==========================*/
+
+::selection{
+    background:#0077ff;
+    color:#fff;
+}
